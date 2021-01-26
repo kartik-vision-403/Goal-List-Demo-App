@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- TODO :Base Card View-->
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_drag_handle_36" />
+
+                <TextView
+                    android:id="@+id/txtTitleGoalList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:paddingVertical="10dp"
+                    android:text="Goal Title"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/imgEditGoalLIst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <TextView
+                    android:id="@+id/txtEndDateGoalList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTitleGoalList"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingVertical="10dp"
+                    android:text="EndDate"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/imgDeleteGoalLIst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgEditGoalLIst"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_delete_24" />
+
+                <ImageButton
+                    android:id="@+id/imgExpandeGoalList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgDeleteGoalLIst"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                <ImageButton
+                    android:id="@+id/imgCollepseGoalList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgDeleteGoalLIst"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_arrow_drop_up_24"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardSubGoalList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvSubGoalList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

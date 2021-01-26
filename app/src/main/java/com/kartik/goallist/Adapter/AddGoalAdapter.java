@@ -74,7 +74,7 @@ public class AddGoalAdapter extends RecyclerView.Adapter  {
         container.imgRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addGoalList.remove(addGoalList.get((int) model.getId()));
+                addGoalList.remove(addGoalList.get(position));
                 dbHandler.deleteAnySubGoal(model.getId());
                 AddGoalActivity.checkValidation = 1;
                 notifyDataSetChanged();
